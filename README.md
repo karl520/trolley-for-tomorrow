@@ -65,6 +65,33 @@ trolley-for-tomorrow/
 
 See each folder's README for detailed setup instructions.
 
+## Versioning Convention
+
+All CHANGELOG files across the project follow semantic versioning.
+
+| Version Format | When to use |
+|---|---|
+| `1.0.0` | First release of a module |
+| `1.0.1` | Small bug fix to existing functionality |
+| `1.1.0` | New feature added to an existing module |
+| `2.0.0` | Breaking change such as restructuring or switching tech stack |
+
+### Examples
+
+- `1.0.0` — initial backend setup
+- `1.0.1` — fix bug in health check endpoint
+- `1.1.0` — add nutrition scoring logic
+- `1.2.0` — add receipt scanning
+- `2.0.0` — switch from Flask to FastAPI
+
+### Rules
+
+- Last number = bug fix
+- Middle number = new feature added
+- First number = breaking change
+- Always update the relevant module CHANGELOG when you make a change
+- Never update another person's module CHANGELOG
+
 ---
 
 ## Tech Stack
@@ -226,6 +253,7 @@ refactor(das/ocr-engine): improve receipt text parsing accuracy
 - If you are unsure what type to use, ask Saubhagya
 
 ---
+
 
 ## Common Commands Quick Reference
 
