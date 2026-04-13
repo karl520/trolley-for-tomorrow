@@ -1,0 +1,20 @@
+# Render Blueprint — static frontend (Vite + React Router)
+# Docs: https://render.com/docs/blueprint-spec
+#
+# After pushing, in Render Dashboard: New → Blueprint → connect this repo.
+# Or add a Static Site manually with the same root / build / publish / rewrites.
+
+services:
+  - type: web
+    name: nutriplan-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    buildFilter:
+      paths:
+        - frontend/**
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
